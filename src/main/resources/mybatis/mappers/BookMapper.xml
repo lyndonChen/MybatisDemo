@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mafwo.dao.BookMapper">
+
+    <cache />
+
+    <select id="getBook" parameterType="long" resultType="com.mafwo.model.Book">
+    SELECT
+          id
+    FROM mafwo_book
+    WHERE id = #{id}
+  </select>
+    <select id="getAll" resultType="com.mafwo.model.Book">
+        SELECT id from mafwo_book
+    </select>
+
+
+</mapper>
